@@ -1,0 +1,41 @@
+/* .hexagon {
+  height: 260px;
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+  transform-origin: 0 0;
+  transform: translateX(150px) rotate(30deg);
+}
+.hexagon .triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 130px 75px 0;
+  border-color: blue transparent;
+  transform-origin: 75px 133px;
+}
+.hexagon .triangle:nth-child(1) {
+  transform: rotate(60deg);
+}
+.hexagon .triangle:nth-child(2) {
+  transform: rotate(120deg);
+}
+.hexagon .triangle:nth-child(3) {
+  transform: rotate(180deg);
+}
+.hexagon .triangle:nth-child(4) {
+  transform: rotate(240deg);
+}
+.hexagon .triangle:nth-child(5) {
+  transform: rotate(300deg);
+}
+.hexagon .triangle:nth-child(5),
+.hexagon .triangle:nth-child(6) {
+  border-color: lightblue transparent;
+}
+.hexagon .triangle:nth-child(2),
+.hexagon .triangle:nth-child(3) {
+  border-color: lightblue transparent;
+}
+ */

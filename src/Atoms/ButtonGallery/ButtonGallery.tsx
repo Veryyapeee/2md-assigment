@@ -6,7 +6,7 @@ interface Props {
 
 const ButtonGallery: React.FC<Props> = ({ children }) => {
   return (
-    <button className="bg-blue-500 text-white  py-2 px-4 rounded">
+    <button className="text-xs bg-blue-500 text-white  py-2 px-4 rounded focus:outline-none">
       {children}
     </button>
   );
