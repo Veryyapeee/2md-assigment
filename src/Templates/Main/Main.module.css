@@ -1,0 +1,5 @@
+@media (min-width: 1024px) {
+  .innerCon {
+    min-width: 700px;
+  }
+}

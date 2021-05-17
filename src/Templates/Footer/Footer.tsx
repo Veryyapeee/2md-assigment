@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <div className="bg-blue-500 h-2/7 justify-between flex flex-row gap-10 p-12 lg:flex-row">
-      <div className="w-6/7 flex flex-col gap-10 lg:flex-row lg:justify-center lg:w-3/5">
+      <div className="w-4/5 flex flex-col gap-10 lg:flex-row lg:justify-center lg:w-3/5">
         <FooterTextSection>
           <FooterTitle>About me</FooterTitle>
           <FooterText>
@@ -54,7 +54,7 @@ const Footer = () => {
           <FooterText>veryyapeee@gmail.com</FooterText>
         </FooterTextSection>
       </div>
-      <div className="flex flex-col gap-5 w-1/7 lg:justify-end lg:w-2/5 lg:flex-row text-right justify-start">
+      <div className="flex flex-col gap-5 w-1/5 lg:justify-end lg:w-2/5 lg:flex-row text-right justify-start">
         <SocialIcon icon={["fab", "facebook-f"]} link="https://facebook.com" />
         <SocialIcon icon={["fab", "twitter"]} link="https://twitter.com" />
         <SocialIcon icon={["fab", "instagram"]} link="https://instagram.com" />

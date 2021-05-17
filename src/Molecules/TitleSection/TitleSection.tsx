@@ -12,7 +12,7 @@ const sentence: string =
 const TitleSection = () => {
   const [more, setMore] = useState(false);
   return (
-    <div className="bg-blue-100 w-full flex flex-col py-12 px-12 gap-2">
+    <div className="bg-blue-100 w-full flex flex-col py-8 sm:py-20 px-12 gap-2 lg:content-center">
       <BlueTitle>This is main page title.</BlueTitle>
       <BlueText>{more ? sentence : `${sentence.slice(0, 50)}...`}</BlueText>
       <div className="flex flex-row gap-4 w-full justify-start">
