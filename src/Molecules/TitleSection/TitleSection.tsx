@@ -4,6 +4,7 @@ import BlueTitle from "Atoms/BlueTitle/BlueTitle";
 import ButtonGallery from "Atoms/ButtonGallery/ButtonGallery";
 import ButtonMore from "Atoms/ButtonMore/ButtonMore";
 import BlueText from "Atoms/BlueText/BlueText";
+import Gallery from "Organism/Gallery/Gallery";
 
 import Modal from "Molecules/Modal/Modal";
 
@@ -17,7 +18,7 @@ const TitleSection = () => {
   return (
     <>
       <Modal show={modal} onClose={() => setModal(false)}>
-        Test
+        <Gallery />
       </Modal>
       <div className="bg-blue-100 w-full flex flex-col py-8 sm:py-20 px-12 gap-2 lg:content-center">
         <BlueTitle>This is main page title.</BlueTitle>

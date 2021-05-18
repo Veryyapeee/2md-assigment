@@ -10,31 +10,16 @@
   z-index: 9999;
 }
 .modalContent {
-  width: 50%;
-  height: 70%;
-  min-width: 300px;
-  border-radius: 4px;
-  background: darkgrey;
+  height: 40%;
+  width: 300px;
+  min-height: 350px;
   position: absolute;
-  top: 50%;
+  background: #e2effa;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 0.5em;
   overflow-y: auto;
 }
 .display {
   display: block;
-}
-
-.modalClose {
-  position: absolute;
-  top: 0.5em;
-  right: 1em;
-  color: black;
-  font-size: 1.5em;
-  font-weight: 600;
-}
-.modalClose:hover {
-  cursor: pointer;
-  color: grey;
 }

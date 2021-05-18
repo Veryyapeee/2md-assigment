@@ -42,7 +42,10 @@ const Modal = (props: Props) => {
             }}
           >
             {props.children}
-            <span onClick={props.onClose} className={styles.modalClose}>
+            <span
+              onClick={props.onClose}
+              className="text-blue-300 font-bold bg-gray-200 rounded-full flex items-center justify-center w-5 h-5 text-xs cursor-pointer absolute top-2 right-2"
+            >
               &#10005;
             </span>
           </motion.div>
