@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 const variants = {
   open: {
     height: "auto",
+    display: "flex",
     transition: { stiffness: 500 },
     opacity: 1,
   },
@@ -21,6 +22,12 @@ const variants = {
     opacity: 0,
     transition: {
       stiffness: 500,
+    },
+  },
+  none: {
+    display: "none",
+    transition: {
+      delay: 0.5,
     },
   },
 };
@@ -44,7 +51,7 @@ const TitleSection = () => {
           <motion.div
             className="text-sm"
             variants={variants}
-            animate={more ? "open" : "closed"}
+            animate={more ? "open" : ["closed", "none"]}
           >
             {sentence.slice(50, sentence.length)}
           </motion.div>
