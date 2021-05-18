@@ -2,7 +2,6 @@ import React from "react";
 
 import GraphicSection from "Molecules/GraphicSection/GraphicSection";
 import TitleSection from "Molecules/TitleSection/TitleSection";
-/* import Hexagon from "Atoms/Hexagon/Hexagon"; */
 
 import styles from "./Main.module.css";
 
@@ -20,7 +19,6 @@ const Main = () => {
       >
         <GraphicSection />
         <TitleSection />
-        {/* <Hexagon /> */}
       </div>
     </div>
   );

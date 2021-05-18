@@ -4,13 +4,9 @@ import styles from "./Hexagon.module.css";
 
 const Hexagon = () => {
   return (
-    <div className={styles.hexagon}>
-      <div className={styles.triangle}></div>
-      <div className={styles.triangle}></div>
-      <div className={styles.triangle}></div>
-      <div className={styles.triangle}></div>
-      <div className={styles.triangle}></div>
-      <div className={styles.triangle}></div>
+    <div className={["hidden lg:block", styles.hexagon].join(" ")}>
+      <div className={styles.triangleLeft}></div>
+      <div className={styles.triangleRight}></div>
     </div>
   );
 };

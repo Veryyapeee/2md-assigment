@@ -12,6 +12,7 @@
 .modalContent {
   height: 40%;
   width: 300px;
+  min-width: 250px;
   min-height: 350px;
   position: absolute;
   background: #e2effa;
