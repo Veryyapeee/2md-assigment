@@ -7,6 +7,17 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #bababa;
+}
+::-webkit-scrollbar-thumb {
+  background: #616161;
+  border-radius: 0;
+}
+
 @media (max-width: 1024px) {
   :root {
     font-size: 12px;

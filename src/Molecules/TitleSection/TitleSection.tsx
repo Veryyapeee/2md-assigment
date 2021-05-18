@@ -39,13 +39,6 @@ const TitleSection = () => {
       </Modal>
       <div className="bg-blue-100 w-full flex flex-col py-8 sm:py-20 px-12 gap-2 lg:content-center">
         <BlueTitle>This is main page title.</BlueTitle>
-        {/* <motion.div
-          className="text-sm"
-          variants={variants}
-          animate={more ? "open" : "closed"}
-        > */}
-        {/*  <BlueText>{more ? sentence : `${sentence.slice(0, 50)}...`}</BlueText> */}
-        {/* </motion.div> */}
         <BlueText>
           {more ? sentence.slice(0, 50) : `${sentence.slice(0, 50)}...`}
           <motion.div
