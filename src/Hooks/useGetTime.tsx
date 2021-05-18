@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const getTime = (date: Date) => {
   return date.toLocaleTimeString(navigator.language, {
     hour: "2-digit",
@@ -6,7 +8,8 @@ const getTime = (date: Date) => {
 };
 
 const useGetTime = (date: Date): any => {
-  return [getTime(date), getTime];
+  const [currTime, setCurrTime] = useState(getTime(date));
+  return [currTime, setCurrTime, getTime];
 };
 
 export default useGetTime;

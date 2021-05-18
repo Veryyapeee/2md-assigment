@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const getDate = (currDate: Date) => {
   let d = new Date(currDate),
     month = `${d.getMonth() + 1}`,
@@ -11,7 +13,8 @@ const getDate = (currDate: Date) => {
 };
 
 const useGetDate = (date: Date): any => {
-  return [getDate(date), getDate];
+  const [currDate, setCurrDate] = useState(getDate(date));
+  return [currDate, setCurrDate, getDate];
 };
 
 export default useGetDate;

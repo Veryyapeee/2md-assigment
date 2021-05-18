@@ -11,7 +11,7 @@ interface Props {
 const GalleryArrow: React.FC<Props> = ({ icon, clicked }) => {
   return (
     <div
-      className="py-2 px-4 border-solid border-blue-400 border-2 rounded-md text-blue-400 w-1/6 cursor-pointer flex justify-center items-center"
+      className="py-2 px-4 border-solid border-blue-400 border-2 rounded-md text-blue-400 w-1/6 cursor-pointer flex justify-center items-center hover:bg-blue-200"
       onClick={clicked}
     >
       <FontAwesomeIcon icon={icon} />

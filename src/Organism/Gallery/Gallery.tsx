@@ -23,9 +23,9 @@ import { Photo } from "Utils/Types/types";
 library.add(faAngleRight, faAngleLeft);
 
 const variants = {
-  open: { x: 0, opacity: 1 },
-  closedRight: { x: "-400%", opacity: 0 },
-  closedLeft: { x: "400%", opacity: 0 },
+  open: { x: 0, opacity: 1, transition: { stiffness: 200 } },
+  closedRight: { x: "-100%", opacity: 0 },
+  closedLeft: { x: "100%", opacity: 0 },
 };
 
 const Gallery = () => {

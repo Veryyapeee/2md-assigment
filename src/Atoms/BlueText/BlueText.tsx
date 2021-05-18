@@ -1,7 +1,6 @@
 import React from "react";
-
 interface Props {
-  children: string;
+  children: any;
 }
 
 const BlueText: React.FC<Props> = ({ children }) => {

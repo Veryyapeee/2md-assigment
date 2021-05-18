@@ -3,10 +3,11 @@
   width: 150px;
   height: 86.6px;
   background-color: #bfdbfe;
-  top: 35%;
+  top: 50%;
   transform: translateY(-50%);
   transform: rotate(-30deg);
-  right: 8em;
+  transform-origin: top left;
+  right: 9em;
 }
 
 .hexagon:before,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Font awesome package
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -22,14 +22,21 @@ import useGetDate from "Hooks/useGetDate";
 library.add(faFacebookF, faTwitter, faInstagram);
 
 const Footer = () => {
-  const [date, setDate] = useGetDate(new Date());
-  const [time, setTime] = useGetTime(new Date());
+  const [date, setCurrDate, getDate] = useGetDate(new Date());
+  const [currTime, setCurrTime, getTime] = useGetTime(new Date());
 
-  setInterval(() => {
-    const currDate = new Date();
-    setDate(currDate);
-    setTime(currDate);
-  }, 60000);
+  // Interval for current date and time
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const currDate = new Date();
+      setCurrDate(getDate(currDate));
+      setCurrTime(getTime(currDate));
+    }, 60000);
+    // Clear interval when component unmount
+    return () => {
+      clearInterval(timer);
+    };
+  }, []); // eslint-disable-line
 
   return (
     <div className="bg-blue-500 h-2/7 justify-between flex flex-row gap-10 p-12 lg:flex-row">
@@ -45,7 +52,7 @@ const Footer = () => {
         <FooterTextSection>
           <FooterTitle>Current time</FooterTitle>
           <FooterText>{date}</FooterText>
-          <FooterText>{time}</FooterText>
+          <FooterText>{currTime}</FooterText>
         </FooterTextSection>
 
         <FooterTextSection>
