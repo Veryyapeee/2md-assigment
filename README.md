@@ -6,7 +6,7 @@ This project was made due to the 2MD Junior React Developer recruitment task.
 * [Technologies](#technologies)
 * [Requirements](#requirements)
 * [Setup](#setup)
-* [Demo](#demolink)
+* [Demo](#demo-link)
 
 ### Technologies
 -----------------
