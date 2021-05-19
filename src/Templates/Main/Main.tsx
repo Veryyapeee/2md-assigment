@@ -1,7 +1,7 @@
 import React from "react";
 
-import GraphicSection from "Molecules/GraphicSection/GraphicSection";
-import TitleSection from "Molecules/TitleSection/TitleSection";
+import GraphicSection from "Organism/GraphicSection/GraphicSection";
+import TitleSection from "Organism/TitleSection/TitleSection";
 
 import styles from "./Main.module.css";
 

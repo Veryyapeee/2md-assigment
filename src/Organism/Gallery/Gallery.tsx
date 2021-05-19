@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import axios from "axios";
-
 import { motion } from "framer-motion";
 
 import BoldTitle from "Atoms/BoldTitle/BoldTitle";
@@ -15,10 +13,12 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 import GalleryArrow from "Atoms/GalleryArrow/GalleryArrow";
-import GalleryImage from "Atoms/GalleryImage/GalleryImage";
-import Spinner from "Atoms/Spinner/Spinner";
+import GalleryImage from "Molecules/GalleryImage/GalleryImage";
 
 import { Photo } from "Utils/Types/types";
+
+import useGetGallery from "Api/Gallery/useGetGallery";
+import FetchHandler from "HOC/FetchHandler/FetchHandler";
 
 library.add(faAngleRight, faAngleLeft);
 
@@ -29,32 +29,20 @@ const variants = {
 };
 
 const Gallery = () => {
-  const [data, setData] = useState<Photo[]>([]);
+  const { isLoading, data, error, firstPhoto } = useGetGallery();
   const [currIndex, setIndex] = useState<number>(0);
-  const [currPhoto, setCurrPhoto] = useState<Photo>();
-  const [loading, setLoading] = useState<boolean>(false);
+  const [currPhoto, setCurrPhoto] = useState<Photo>(firstPhoto);
   const [swipeLeft, setSwipeLeft] = useState<boolean>(false);
   const [swipeRight, setSwipeRight] = useState<boolean>(false);
 
   // Fetch data
   useEffect(() => {
-    setLoading(true);
-    axios
-      .get("https://picsum.photos/v2/list?limit=10")
-      .then((res) => {
-        setData(res.data);
-        setCurrPhoto(res.data[0]);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error!");
-        setLoading(false);
-      });
-  }, []);
+    setCurrPhoto(firstPhoto);
+  }, [data]); //eslint-disable-line
 
   // Next image
   const next = () => {
-    setCurrPhoto(data[currIndex + 1]);
+    setCurrPhoto(data![currIndex + 1]);
     setIndex(currIndex + 1);
     setSwipeLeft(true);
     setTimeout(() => {
@@ -64,7 +52,7 @@ const Gallery = () => {
 
   // Previous image
   const prev = () => {
-    setCurrPhoto(data[currIndex - 1]);
+    setCurrPhoto(data![currIndex - 1]);
     setIndex(currIndex - 1);
     setSwipeRight(true);
     setTimeout(() => {
@@ -72,46 +60,39 @@ const Gallery = () => {
     }, 200);
   };
 
-  // Return spinner while fetching
-  if (loading) {
-    return (
-      <div className="h-full w-full flex justify-center items-center">
-        <Spinner loading={loading} />
-      </div>
-    );
-  }
-
   return (
     <div className="h-full w-full overflow-x-hidden">
-      {currPhoto && (
-        <>
-          <GalleryTitle>
-            <BoldTitle>GALLERY</BoldTitle>
-            <PhotoLink link={currPhoto.url} />
-          </GalleryTitle>
-          <GallerySlideShow>
-            {currIndex !== 0 && (
-              <GalleryArrow icon={faAngleLeft} clicked={() => prev()} />
-            )}
-            <motion.div
-              className="w-full h-full flex justify-center items-center"
-              variants={variants}
-              animate={
-                swipeLeft ? "closedLeft" : swipeRight ? "closedRight" : "open"
-              }
-              style={{
-                visibility: swipeLeft || swipeRight ? "hidden" : "visible",
-              }}
-            >
-              <GalleryImage image={currPhoto.download_url} />
-            </motion.div>
-            {currIndex !== data.length - 1 && (
-              <GalleryArrow icon={faAngleRight} clicked={() => next()} />
-            )}
-          </GallerySlideShow>
-          <GalleryFooter author={currPhoto.author} />
-        </>
-      )}
+      <FetchHandler loading={isLoading} data={data} error={error}>
+        {currPhoto && (
+          <>
+            <GalleryTitle>
+              <BoldTitle>GALLERY</BoldTitle>
+              <PhotoLink link={currPhoto.url} />
+            </GalleryTitle>
+            <GallerySlideShow>
+              {currIndex !== 0 && (
+                <GalleryArrow icon={faAngleLeft} clicked={() => prev()} />
+              )}
+              <motion.div
+                className="w-full h-full flex justify-center items-center"
+                variants={variants}
+                animate={
+                  swipeLeft ? "closedLeft" : swipeRight ? "closedRight" : "open"
+                }
+                style={{
+                  visibility: swipeLeft || swipeRight ? "hidden" : "visible",
+                }}
+              >
+                <GalleryImage image={currPhoto.download_url} />
+              </motion.div>
+              {currIndex !== data!.length - 1 && (
+                <GalleryArrow icon={faAngleRight} clicked={() => next()} />
+              )}
+            </GallerySlideShow>
+            <GalleryFooter author={currPhoto.author} />
+          </>
+        )}
+      </FetchHandler>
     </div>
   );
 };

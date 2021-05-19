@@ -6,7 +6,7 @@ import ButtonMore from "Atoms/ButtonMore/ButtonMore";
 import BlueText from "Atoms/BlueText/BlueText";
 import Gallery from "Organism/Gallery/Gallery";
 
-import Modal from "Molecules/Modal/Modal";
+import Modal from "Organism/Modal/Modal";
 
 import { motion } from "framer-motion";
 
@@ -23,11 +23,8 @@ const variants = {
     transition: {
       stiffness: 500,
     },
-  },
-  none: {
-    display: "none",
-    transition: {
-      delay: 0.5,
+    transitionEnd: {
+      display: "none",
     },
   },
 };
@@ -51,7 +48,7 @@ const TitleSection = () => {
           <motion.div
             className="text-sm"
             variants={variants}
-            animate={more ? "open" : ["closed", "none"]}
+            animate={more ? "open" : "closed"}
           >
             {sentence.slice(50, sentence.length)}
           </motion.div>
