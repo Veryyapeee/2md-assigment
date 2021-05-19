@@ -1,6 +1,6 @@
 # 2MD Recruitment task
 
-This project was made due to the 2MD Junior React Developer recruitment task.
+This project was made due to the 2MD recruitment task for the position of Junior Front End Developer.
 
 ### Table of Contents
 * [Technologies](#technologies)
