@@ -1,14 +1,15 @@
 import { useState } from "react";
 
-const useGetTime = (date: Date) => {
-  const [time, setTime] = useState<any>(
-    date.toLocaleTimeString(navigator.language, {
-      hour: "2-digit",
-      minute: "2-digit",
-    })
-  );
+const getTime = (date: Date) => {
+  return date.toLocaleTimeString(navigator.language, {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+};
 
-  return [time, setTime];
+const useGetTime = (date: Date): any => {
+  const [currTime, setCurrTime] = useState(getTime(date));
+  return [currTime, setCurrTime, getTime];
 };
 
 export default useGetTime;

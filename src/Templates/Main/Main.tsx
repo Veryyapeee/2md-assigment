@@ -1,12 +1,25 @@
-import GraphicSection from "Molecules/GraphicSection/GraphicSection";
-import TitleSection from "Molecules/TitleSection/TitleSection";
 import React from "react";
+
+import GraphicSection from "Organism/GraphicSection/GraphicSection";
+import TitleSection from "Organism/TitleSection/TitleSection";
+
+import styles from "./Main.module.css";
 
 const Main = () => {
   return (
-    <div className="flex flex-row w-screen h-2 justify-center align-center py-40 h-5/6 px-96 min-w-600">
-      <GraphicSection />
-      <TitleSection />
+    <div
+      className="w-full h-full flex justify-center h-5/7 items-center px-4 py-12"
+      style={{ minHeight: "600px" }}
+    >
+      <div
+        className={[
+          "flex justify-center flex-col h-auto w-3/4 lg:w-2/5 lg:flex-row lg:min-w-96",
+          styles.innerCon,
+        ].join(" ")}
+      >
+        <GraphicSection />
+        <TitleSection />
+      </div>
     </div>
   );
 };
