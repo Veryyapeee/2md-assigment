@@ -49,6 +49,7 @@ const TitleSection = () => {
             className="text-sm"
             variants={variants}
             animate={more ? "open" : "closed"}
+            initial={{ display: "none", opacity: 0 }}
           >
             {sentence.slice(50, sentence.length)}
           </motion.div>

@@ -8,7 +8,7 @@ import styles from "./Main.module.css";
 const Main = () => {
   return (
     <div
-      className="w-full h-full flex justify-center h-5/7 items-center px-4 py-12"
+      className="w-full h-full flex justify-center h-5/7 items-center px-4 py-12 overflow-auto"
       style={{ minHeight: "600px" }}
     >
       <div
