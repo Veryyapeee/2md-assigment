@@ -6,6 +6,7 @@ This project was made due to the 2MD Junior React Developer recruitment task.
 * [Technologies](#technologies)
 * [Requirements](#requirements)
 * [Setup](#setup)
+* [Demo](#demolink)
 
 ### Technologies
 -----------------
@@ -42,3 +43,6 @@ If you do not know if you have it installed on your computer and you still want 
 * *Run command **yarn*** to install all dependencies
 * *Run command **yarn dev*** to run local server on localhost:3000
 * *Run command **yarn build*** to build the project - in **build** folder you will have index.html file - this is file with all source code minified and merged, and folder static with react build files
+
+## Demo link
+- https://cranky-hugle-835b81.netlify.app/
