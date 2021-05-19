@@ -44,8 +44,8 @@ const Footer = () => {
         <FooterTextSection>
           <FooterTitle>About me</FooterTitle>
           <FooterText>
-            My name is Cyprian, I am 21 years old, and I want to become a
-            software developer!
+            My name is Cyprian, I am 21 years old, and I want to become software
+            developer by learning from much better than me!
           </FooterText>
         </FooterTextSection>
 
