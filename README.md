@@ -45,4 +45,5 @@ If you do not know if you have it installed on your computer and you still want 
 * *Run command **yarn build*** to build the project - in **build** folder you will have index.html file - this is file with all source code minified and merged, and folder static with react build files
 
 ## Demo link
+-----------------
 - https://cranky-hugle-835b81.netlify.app/
