@@ -41,4 +41,4 @@ If you do not know if you have it installed on your computer and you still want 
 * *Open repository in your code editor*
 * *Run command **yarn*** to install all dependencies
 * *Run command **yarn dev*** to run local server on localhost:3000
-* *Run command **yarn build*** to build the project - in **build*** folder you will have index.html file - this is file with all source code minified and merged, and folder static with react build files
+* *Run command **yarn build*** to build the project - in **build** folder you will have index.html file - this is file with all source code minified and merged, and folder static with react build files
