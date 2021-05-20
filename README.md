@@ -33,7 +33,7 @@ If you do not know if you have it installed on your computer and you still want 
 * *After that you can run again the command from the first line just to confirm that you have succesfully installed required* **package manager**
 ##### Install yarn
 * *To install yarn* **package manager (faster version of npm)** *run the commnad **npm install --global yarn***
-* *confirm yarn install by tpying command **yarn --version***
+* *confirm yarn install by typing command **yarn --version***
 
 ### Setup
 -----------------
