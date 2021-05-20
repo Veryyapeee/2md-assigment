@@ -32,7 +32,7 @@ If you do not know if you have it installed on your computer and you still want 
 * *Otherwise, you will have to install it, the best way to do it is installing it globaly by running the command **npm install npm@latest -g***
 * *After that you can run again the command from the first line just to confirm that you have succesfully installed required* **package manager**
 ##### Install yarn
-* *To install yarn* **package manager (faster vesrion of npm)** *run the commnad **npm install --global yarn***
+* *To install yarn* **package manager (faster version of npm)** *run the commnad **npm install --global yarn***
 * *confirm yarn install by tpying command **yarn --version***
 
 ### Setup
